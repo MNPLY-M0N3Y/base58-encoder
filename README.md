@@ -34,7 +34,7 @@ cd base58-encoder
 cargo build --release
 
 # Run your first encoding
-./target/release/solana-base58-cli encode -i "Hello Solana"
+./target/release/base58-cli encode -i "Hello Solana"
 ```
 
 ### Global Installation
@@ -43,7 +43,7 @@ cargo build --release
 cargo install --path .
 
 # Now use from anywhere
-solana-base58-cli --help
+base58-cli --help
 ```
 
 ## 🚀 Usage Examples
@@ -51,32 +51,32 @@ solana-base58-cli --help
 ### Basic Text Encoding
 ```bash
 # Encode your name
-solana-base58-cli encode -i "YourName"
+base58-cli encode -i "YourName"
 # Output: ✅ Base58 encoded: 2bTXhxtywqzL
 
 # Decode it back
-solana-base58-cli decode -i "2bTXhxtywqzL"
+base58-cli decode -i "2bTXhxtywqzL"
 # Output: ✅ Decoded (string): YourName
 ```
 
 ### Working with Hex Data
 ```bash
 # Encode hex data (like raw transaction data)
-solana-base58-cli encode -i "48656c6c6f" --hex
+base58-cli encode -i "48656c6c6f" --hex
 # Output: ✅ Base58 encoded: 5d41402abc
 
 # Decode and see as hex
-solana-base58-cli decode -i "5d41402abc" --hex
+base58-cli decode -i "5d41402abc" --hex
 # Output: ✅ Decoded (hex): 48656c6c6f
 ```
 
 ### Solana Wallet Operations
 ```bash
 # Convert Solana keypair file to Base58 private key
-solana-base58-cli wallet-to-base58 -f ~/.config/solana/id.json
+base58-cli wallet-to-base58 -f ~/.config/solana/id.json
 
 # Convert Base58 private key back to wallet format
-solana-base58-cli base58-to-wallet -i "YourBase58PrivateKey" -o new-wallet.json
+base58-cli base58-to-wallet -i "YourBase58PrivateKey" -o new-wallet.json
 ```
 
 ## 📖 What You'll Learn
@@ -153,8 +153,8 @@ Learn how Solana stores private keys and how different wallet formats work. This
 
 - [ ] Install Rust if you haven't already
 - [ ] Clone and build the project
-- [ ] Try encoding your name: `solana-base58-cli encode -i "YourName"`
-- [ ] Decode it back to verify: `solana-base58-cli decode -i [result]`
+- [ ] Try encoding your name: `base58-cli encode -i "YourName"`
+- [ ] Decode it back to verify: `base58-cli decode -i [result]`
 - [ ] Experiment with hex data using `--hex` flag
 - [ ] If you have a Solana wallet, try `wallet-to-base58` command
 
